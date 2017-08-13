@@ -16,7 +16,6 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.moranav.hungry.model.ModelFiles;
 import com.example.moranav.hungry.model.ModelResturant;
 import com.example.moranav.hungry.model.Restaurant;
 
@@ -45,8 +44,8 @@ public class ResListFragment extends Fragment {
     ResListAdapter adapter;
     private ResListFragmentListener mListener;
 
-    private static final String ID = "id";
-    private String id ;
+    private static final String USER_ID = "user_id";
+    private String user_id;
 
     public ResListFragment() {
         // Required empty public constructor
@@ -57,10 +56,10 @@ public class ResListFragment extends Fragment {
      * this fragment using the provided parameters.
      * @return A new instance of fragment ResListFragment.
      */
-    public static ResListFragment newInstance(String id) {
+    public static ResListFragment newInstance(String user_id) {
         ResListFragment fragment = new ResListFragment();
         Bundle args = new Bundle();
-        args.putString(ID, id);
+        args.putString(USER_ID, user_id);
         fragment.setArguments(args);
         return fragment;
     }
@@ -69,7 +68,7 @@ public class ResListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            id = getArguments().getString(ID);
+            user_id = getArguments().getString(USER_ID);
 
         }
     }
@@ -80,12 +79,12 @@ public class ResListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_res_list, container, false);
 
-        //it's a regular user- show him the full list of restaurants
-        if(id == null)
+        //show him the full list of restaurants (restaurant list)
+        if(user_id == null)
             data = ModelResturant.instance.getAllRestaurants() ;
-        //it's a restaurant owner- show him the list of his restaurants
+        //show him the list of his restaurants (edit restaurant)
         else
-            data = ModelResturant.instance.getAllRestaurantsByOwnerID(id);
+            data = ModelResturant.instance.getAllRestaurantsByOwnerID(user_id);
 
         list = (ListView) view.findViewById(R.id.res_list);
         adapter = new ResListAdapter();
@@ -136,8 +135,9 @@ public class ResListFragment extends Fragment {
     //update the restaurants list
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(ModelResturant.UpdateRestaurantEvent event) {
-        if(id!=null)
-            if(!event.res.ownerID.equals(id))
+        //check if relevant for owner
+        if(user_id!=null)
+            if(!event.res.ownerID.equals(user_id))
                 return ;
 
         boolean exist = false;

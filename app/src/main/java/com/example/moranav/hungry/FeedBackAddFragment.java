@@ -116,7 +116,7 @@ public class FeedBackAddFragment extends Fragment {
                     //if add new feedback- add the new feedback to the list
                     else {
                         feed.resID = FeedBackAddFragment.this.ResId ;
-                        feed.id = feed.ownerID + Utils.getTimeValue() ;// ---> random id
+                        feed.id = feed.ownerID + Utils.getTimeValue() ;// ---> add time val to id
                         feed.resName = ModelResturant.instance.getRestaurant(feed.resID).name ;
                         ModelFeedBack.instance.addFeedBack(feed);
                     }
