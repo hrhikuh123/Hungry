@@ -37,12 +37,13 @@ public class AuthActivity extends Activity implements SignInFragment.SinginFragm
     public void onSignin() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override
     public void onRegisterSuccess(User user) {
         ModelUser.instance.addUser(user);
         onSignin();
-        finish();
+
     }
 }
