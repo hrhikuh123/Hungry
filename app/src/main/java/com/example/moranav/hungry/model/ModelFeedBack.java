@@ -22,6 +22,7 @@ public class ModelFeedBack {
     private ModelFeedBack() {
         firebaseFeedBack = new FirebaseFeedBack();
         modelSql = Utils.modelSql ;
+
     }
 
     private void synchFeedbacksDbAndregisterFeedbackUpdates() {

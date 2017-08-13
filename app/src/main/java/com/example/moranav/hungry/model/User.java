@@ -1,8 +1,6 @@
 package com.example.moranav.hungry.model;
 
-/**
- * Created by user on 01/08/2017.
- */
+
 
 public class User {
 

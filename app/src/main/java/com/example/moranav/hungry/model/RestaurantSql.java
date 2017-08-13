@@ -114,7 +114,7 @@ public class RestaurantSql {
     }
 
     static public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop " + RESTAURANT_TABLE + ";");
+        db.execSQL("drop table " + RESTAURANT_TABLE + ";");
         onCreate(db);
     }
     static public void deleteRestaurant(SQLiteDatabase db, Restaurant res)

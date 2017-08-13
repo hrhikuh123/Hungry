@@ -113,7 +113,7 @@ public class FeedBackSql {
     }
 
     static public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop " + FEEDBACK_TABLE + ";");
+        db.execSQL("drop table " + FEEDBACK_TABLE + ";");
         onCreate(db);
     }
     static public void deleteFeedBack(SQLiteDatabase db, FeedBack res)
