@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.moranav.hungry.FeedBackAddFragment"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    >
+
+    <TextView
+        android:id="@+id/feed_title_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="הוסף תגובה"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/feed_feedBack_add"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr">
+
+
+    <Button
+        android:id="@+id/feed_save_add"
+        android:layout_gravity="left"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="שמור"
+        android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/feed_delete_add"
+            android:layout_gravity="left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="מחיקה"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/feed_cancel_add"
+            android:layout_gravity="left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="ביטול"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.moranav.hungry.MainActivity"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/res_title_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="הוספת מסעדה "
+        android:textSize="20sp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="שם"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/res_name_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="תיאור"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/res_description_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="כתובת"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/res_address_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="טלפון"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/res_phone_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="שעות פתיחה"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/res_openHour_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/mainProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/mainImageView"
+        android:src="@drawable/camera"
+        android:layout_marginLeft="80dp"/>
+            <ProgressBar
+                android:id="@+id/edit_image_ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Image"
+                android:textSize="20dp"
+                android:id="@+id/label_image_edit"
+                android:gravity="bottom|center"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="55dp">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/mainLogoView"
+            android:src="@drawable/logo_cam"/>
+            <ProgressBar
+                android:id="@+id/logo_edit_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/label_logo_edit"
+                android:text="Logo"
+                android:textSize="20dp"
+                android:gravity="bottom|center"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/mainSaveBtn"
+            android:layout_width="1dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:onClick="btnListener"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/mainCancelBtn"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="btnListener"/>
+
+        <Button
+            android:id="@+id/mainDelBtn"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="btnListener"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>

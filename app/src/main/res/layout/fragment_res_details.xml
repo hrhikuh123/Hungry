@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.moranav.hungry.ResDetailsFragment"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+        <ImageView
+            android:id="@+id/res_logo_details"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/res_image"
+            />
+        <ProgressBar
+            android:id="@+id/res_logo_details_ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/res_name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="מסעדה"
+            android:textSize="40dp"
+            android:layout_margin="17dp"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        >
+    <TextView
+        android:id="@+id/res_description_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="תיאור"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+
+        />
+    <TextView
+        android:id="@+id/res_address_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="כתובת"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:id="@+id/res_phone_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="טלפון"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:id="@+id/res_openHour_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שעות פתיחה"
+        android:textSize="20dp"
+
+        />
+    </LinearLayout>
+    <Button
+        android:id="@+id/res_feedback_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="לתגובות"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    <ImageView
+        android:id="@+id/res_images_details"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="5dp"/>
+        <ProgressBar
+            android:id="@+id/res_details_image_ProcessBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+</FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
+    <FrameLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+    <ImageView
+        android:id="@+id/res_image_row"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/res_image"
+        />
+    <ProgressBar
+        android:id="@+id/resRow_ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/res_name_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="מסעדה"
+        android:textSize="30dp"
+        android:layout_margin="25dp"
+        />
+</LinearLayout>
